@@ -1,0 +1,23 @@
+# Maintainer: Lukas Heindl <oss.heindl@protonmail.com>
+pkgname=playermgmt
+pkgver=0.9.0
+pkgrel=1
+pkgdesc="A simple tool to start/stop media with one button (like on a headset)"
+arch=('x86_64')
+url="https://github.com/atticus-sullivan/playermgmt"
+license=('MIT')
+depends=("playerctl" "bash")
+provides=("playermgmt")
+conflicts=("playermgmt-dev")
+source=("${pkgname}::git+${url}.git#branch=dev")
+sha256sums=('SKIP')
+
+pkgver() {
+	cd "${pkgname}"
+	git rev-parse --short HEAD
+}
+
+package() {
+	cd "${pkgname}"
+	install -Dm755 "playermgmt.bash" "$pkgdir/usr/local/bin/playermgmt"
+}
