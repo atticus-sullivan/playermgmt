@@ -1,6 +1,6 @@
 # Maintainer: Lukas Heindl <oss.heindl@protonmail.com>
 pkgname=playermgmt-dev
-pkgver=67b130a
+pkgver=23203ab
 pkgrel=1
 pkgdesc="A simple tool to start/stop media with one button (like on a headset)"
 arch=('x86_64')
