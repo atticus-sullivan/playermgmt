@@ -1,15 +1,16 @@
 # Maintainer: Lukas Heindl <oss.heindl@protonmail.com>
 pkgname=playermgmt-dev
-pkgver=23203ab
+pkgver=321e7ef
 pkgrel=1
 pkgdesc="A simple tool to start/stop media with one button (like on a headset)"
 arch=('x86_64')
-url="https://github.com/atticus-sullivan/playermgmt"
+url="https://git.atticus-sullivan.de/wm-tools/playermgmt"
 license=('MIT')
 depends=("playerctl" "bash")
 provides=("playermgmt")
 conflicts=("playermgmt")
 source=("${pkgname}::git+${url}.git#branch=dev")
+source=("${pkgname}::git+ssh://git@git.atticus-sullivan.de:3022/wm-tools/playermgmt.git#branch=dev")
 sha256sums=('SKIP')
 
 pkgver() {
